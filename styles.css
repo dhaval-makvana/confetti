@@ -1,0 +1,136 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+.display {
+	width: 100wh;
+	height: 100vh;
+	background-color: white;
+	position: relative;
+}
+
+.red {
+	display: block;
+	height: 1.5%;
+	width: 1.5%;
+	background-color: red;
+	position: absolute;
+	top: 0;
+}
+
+.pink {
+	background-color: pink;
+	height: 1.25%;
+	width: 1%;
+	position: absolute;
+	top: 0;
+}
+
+.blue {
+	background-color: blue;
+	height: 1.5%;
+	width: 1%;
+	position: absolute;
+	top: 0;
+}
+
+.yellow {
+	background-color: yellow;
+	height: 2%;
+	width: 1.25%;
+	position: absolute;
+	top: 0;
+}
+
+.brown {
+	background-color: brown;
+	height: 1%;
+	width: 0.5%;
+	position: absolute;
+	top: 0;
+}
+
+.green {
+	background-color: brown;
+	height: 1%;
+	width: 0.5%;
+	position: absolute;
+	top: 0;
+	left: 23;
+}
+
+.down {
+	animation: downFall 8s ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+@keyframes downFall {
+	0% {
+		top: 0;
+		transform: rotate3d(0, -1, 2, 60deg);
+	}
+
+	100% {
+		top: 95vh;
+		transform: rotate3d(2, 0, 0, 60deg);
+		/* display: none; */
+	}
+}
+
+#firstFrame {
+	text-transform: uppercase;
+	font-weight: 800;
+	letter-spacing: 3rem;
+	text-align: center;
+	background-color: white;
+	animation: textOut 1.5s ease-in;
+	animation-fill-mode: forwards;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 10rem;
+}
+
+@keyframes textOut {
+	0% {
+        font-size: 10rem;
+        /* display: flex; */
+        /* z-index: 1; */
+        /* position: absolute; */
+	}
+
+	100% {
+		font-size: 20rem;
+		display: none;
+	}
+}
+
+#secondFrame {
+	text-transform: uppercase;
+	font-weight: 800;
+	letter-spacing: 3rem;
+	text-align: center;
+	background-color: black;
+	animation: textOut 1.5s ease-out;
+	animation-delay: 1.5s;
+	animation-fill-mode: backwards;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    font-size: 10rem;
+    /* top: 0%;
+    left: 0%; */
+}
